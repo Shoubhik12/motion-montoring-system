@@ -1,0 +1,9 @@
+<body>
+<h1>Firebase Data</h1>
+<ul>
+    {% for item in database %}
+        <li>{{ item.date }} {{item.door}} {{item.time}}</li>
+       
+    {% endfor %}
+</ul>
+</body>

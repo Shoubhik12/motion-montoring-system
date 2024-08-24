@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Door Lock Status History</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 20px;
+        }
+        h1 {
+            text-align: center;
+        }
+        table {
+            width: 100%;
+            border-collapse: collapse;
+            margin-top: 20px;
+        }
+        th, td {
+            padding: 12px;
+            text-align: left;
+            border-bottom: 1px solid #ddd;
+        }
+        th {
+            background-color: #2196F3;
+            color: white;
+        }
+        tr:nth-child(even) {
+            background-color: #f2f2f2;
+        }
+        tr:hover {
+            background-color: #ddd;
+        }
+        .link-back {
+            display: block;
+            margin: 20px 0;
+            text-align: left;
+        }
+        .link-back a {
+            text-decoration: none;
+            color: #2196F3;
+            font-weight: bold;
+        }
+        .link-back a:hover {
+            text-decoration: underline;
+        }
+    </style>
+</head>
+<body>
+    <h1>Door Lock Status History</h1>
+    
+    <div class="link-back">
+        <a href="home.html">Back to Monitoring Dashboard</a>
+    </div>
+    
+
+            
+        
+
+
+   
+    <ul>
+        <strong>Date &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;   &nbsp;&nbsp;Status      &nbsp;&nbsp;&nbsp;&nbsp;Time</strong>
+        {% for item in database %}
+           <li> {{ item.date }} &nbsp;  {{item.door}} &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;  {{item.time}} </li>
+           
+        {% endfor %}
+    </ul>
+</body>
+</html>
